@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>中拍平台_拍卖我们更专业</title>
+    <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width" />
+    <meta name="keywords" content="司法拍卖,拍卖,法院拍卖,拍卖公告,中国拍卖行业协会,中拍网,司法拍卖下的撤拍,司法拍卖平台,司法拍卖网,公车拍卖,拍卖网站,拍卖流程,网络拍卖,房产拍卖,在线拍卖,法院拍卖网,法院拍卖房产,法院拍卖资产,法院拍卖财产,法院拍卖二手车,房产拍卖公告,法院拍卖公告,拍卖行业协会,司法解释">
+    <meta name="description" content="司法拍卖,拍卖,法院拍卖,拍卖公告,中国拍卖行业协会,中拍网,司法拍卖下的撤拍,司法拍卖平台,司法拍卖网,公车拍卖,拍卖网站,拍卖流程,网络拍卖,房产拍卖,在线拍卖,法院拍卖网,法院拍卖房产,法院拍卖资产,法院拍卖财产,法院拍卖二手车,房产拍卖公告,法院拍卖公告,拍卖行业协会,司法解释">
+    <meta http-equiv="pragram" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache, must-revalidate">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" href="/images/favicon.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="/images/favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="/css/index.css" />
+</head>
+
+<body class="not-found-body">
+    <div class="not-found-wrap" id="small-not">
+        <img class="not-found-img" src="/images/404.jpg" alt="">
+        <div class="container">
+            <p>很抱歉，页面没有找到</p>
+            <a href="/index.html">返回首页</a>
+        </div>
+    </div>
+    <div class="not-found-wrap" id="large-not">
+        <img class="not-found-img" src="/images/404.png" alt="">
+        <div class="container">
+            <p>很抱歉，页面没有找到</p>
+            <a href="/index.html">返回首页</a>
+        </div>
+    </div>
+    <script src="/extra/jquery-1.9.1.min.js"></script>
+    <script>
+        $(function() {
+            var $small = $('#small-not'),
+                $large = $('#large-not');
+
+            function reset(a, b) {
+                b.hide();
+                a.show();
+                var setheight = $(window).height(),
+                    setwidth = $(window).width();
+                a.css('height', setheight);
+                a.find('.container').css({
+                    'top': setheight * 0.1,
+                    'width': setwidth * 0.33
+                });
+                a.find('.not-found-img').css('height', '100%');
+            }
+
+            function chose() {
+                if ($(window).width() <= 1600) {
+                    reset($small, $large);
+
+                } else {
+                    reset($large, $small);
+
+                }
+            }
+            chose();
+            $(window).resize(function() {
+                chose();
+            })
+        })
+    </script>
+</body>
+
+</html>
